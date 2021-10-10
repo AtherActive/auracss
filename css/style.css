@@ -4,14 +4,21 @@
     --style2-bgcolor: rgb(168, 168, 168);
     --style2-text-color: white;
 
+    --transparent-background: rgba(50,50,50,50%);
+
+    /* Fonts! Who does not like them? Ofcourse, import them in your HTML file too! */
     --font-regular: 'Roboto', sans-serif;
     --font-header: 'Roboto', sans-serif;
 
+    /* Default button styles! This is the default style, and can be overwritten later of course */
     --button-color1: rgb(40, 131, 250);
     --button-color2: rgb(40, 131, 250);
     --button-roundness: 0.3rem;
     --button-box-shadow: drop-shadow(0rem 0rem 0rem black);
-    --button-transition-time: .2s all ease
+    --button-transition-time: .2s all ease;
+
+    /* Some small settings for borders.. */
+    --border-roundness: var(--button-roundness);
 }
 
 html, body {
@@ -21,7 +28,7 @@ html, body {
     height: 100%;
     max-width: 100vw;
     font-family: var(--font-regular);
-    transition: all 0.2s;
+    transition: all 0.4s;
 }
 
 body * {box-sizing: border-box;}
@@ -43,6 +50,17 @@ div.background.color.s2 {
     background-color: var(--style2-bgcolor);
 }
 
+div.background.image {
+    background-image: var(--image);
+    background-size: cover;
+}
+
+div.background.transparent {
+    background-color: var(--transparent-background);
+}
+
+
+
 /* Content sections. Define contaners essentially */
 
 div.container {
@@ -50,10 +68,12 @@ div.container {
     padding: .5rem;
 }
 
+div.container.s25 {width: 25%;}
 div.container.s33 {width: 33.33%;}
 div.container.s50 {width: 50%;}
 div.container.s66 {width: 66.66%;}
 div.container.s75 {width: 75%;}
+div.container.s90 {width: 90%;}
 
 /* Font Color defaults*/
 .txt.s1 {color: var(--style1-text-color);}
@@ -78,6 +98,9 @@ p {
 .txt.left {text-align: left;}
 .txt.right {text-align: right;}
 
+/* Text modifiers */
+.txt.small {font-size: .5rem;}
+
 /* Grid */
 div.row {
     display: flex;
@@ -95,6 +118,9 @@ div.row.evenly {justify-content: space-evenly;}
 
 div.col {
     padding: 0.1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.6rem;
     width: auto
     /* margin: auto; */
 }
@@ -106,22 +132,28 @@ div.col.s50 {width: 50%;}
 div.col.s33 {width: calc(100%/3);}
 div.col.s25 {width: 25%;}
 
+div.row.align.center {justify-content: center;}
+div.row.align.right {justify-content: flex-end;}
+div.row.align.left {justify-content: flex-start;}
 
 /* Buttons and interactables */
-button {
+button,
+a.button,
+a.button.visited {
+    text-decoration: none;
     margin-top: .5rem;
     min-width: 5rem;
-    border: 0.1rem solid var(--button-color1);
+    border: 0.1rem transparent rgba(0, 0, 0, 0);
     border-radius: var(--button-roundness);
     background-color: var(--button-color1);
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: var(--button-transition-time);
 
     padding-top: .2rem;
     padding-bottom: .2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 button.s1 {
     background-color: var(--button-color1);
@@ -131,8 +163,60 @@ button.s2 {
     background-color: var(--button-color2);
     border: 0.1rem solid var(--button-color2);
 }
-button:hover {
+button:hover,
+a.button:hover,
+a.button.visited:hover {
     filter: var(--button-box-shadow) saturate(3);
     transition: var(--button-transition-time);
 
+}
+/* Bordering on components */
+.border {
+    border: transparent .1rem rgba(0,0,0,0);
+}
+.border.round {
+    border-radius: var(--button-roundness);
+}
+
+/* Opacity */
+.opacity-75.s1 {background-color: rgba(var(--style1-bgcolor,75%));}
+.opacity-75.s2 {background-color: rgba(var(--style2-bgcolor,75%));}
+.opacity-50 {opacity: 50%;}
+.opacity-25 {opacity: 25%;}
+.opacity-0 {opacity: 0%;}
+.opacity.test {
+    background-color: transparent inherit;
+}
+
+/* Coloring */
+
+.color.custom {background-color: var(--bg);}
+
+/* Cards */
+
+div.card {
+    --bgstyle: var(--style1-bgcolor);
+    --txtstyle: var(--style1-text-color);
+
+    color: var(--txtstyle);
+    background-color: var(--bgstyle);
+    border: transparent 1px rgba(0, 0, 0, 0);
+    border-radius: var(--border-roundness);
+    max-width: 100%;
+    transition: all .2s ease;
+}
+
+div.card:hover {
+    filter: drop-shadow(0rem 0rem .2rem black);
+    transition: all .2s ease;
+}
+
+img.card-img {
+    max-width: 100%;
+    max-height: 100%;
+    background-size: cover;
+}
+
+div.card-content {
+    padding: 1rem;
 }
