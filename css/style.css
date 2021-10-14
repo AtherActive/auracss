@@ -19,6 +19,14 @@
 
     /* Some small settings for borders.. */
     --border-roundness: var(--button-roundness);
+
+    /* Menu */
+    --menu-color: rgb(53, 53, 53);
+    --menu-text-color: rgb(255, 255, 255);
+    --menu-logo-color: white;
+    --menu-item-color: rgb(39, 39, 39);
+    --menu-itemlogo-color: rgb(255, 255, 255);
+    --nav-item-height: 3rem;
 }
 
 html, body {
@@ -100,6 +108,7 @@ p {
 
 /* Text modifiers */
 .txt.small {font-size: .5rem;}
+.bold {font-weight: 800;}
 
 /* Grid */
 div.row {
@@ -112,9 +121,6 @@ div.row {
 div.row.wrap{flex-wrap: wrap;}
 div.row.nowrap{flex-wrap: nowrap;}
 
-div.row.around {justify-content: space-around;}
-div.row.between {justify-content: space-between;}
-div.row.evenly {justify-content: space-evenly;}
 
 div.col {
     padding: 0.1rem;
@@ -124,7 +130,6 @@ div.col {
     width: auto
     /* margin: auto; */
 }
-
 div.col.s100 {width: 100%;}
 div.col.s75 {width: 75%;}
 div.col.s66 {width: calc(100%/3*2);}
@@ -135,6 +140,8 @@ div.col.s25 {width: 25%;}
 div.row.align.center {justify-content: center;}
 div.row.align.right {justify-content: flex-end;}
 div.row.align.left {justify-content: flex-start;}
+
+div.none {display: none;}
 
 /* Buttons and interactables */
 button,
@@ -204,6 +211,7 @@ div.card {
     border-radius: var(--border-roundness);
     max-width: 100%;
     transition: all .2s ease;
+    height: 100%;
 }
 
 div.card:hover {
@@ -220,3 +228,86 @@ img.card-img {
 div.card-content {
     padding: 1rem;
 }
+
+/* effects */
+.zooming:hover {background-size: 150%;}
+.zooming {background-size: 100%;}
+
+/* Alignment Global */
+.around {justify-content: space-around;}
+.between {justify-content: space-between;}
+.evenly {justify-content: space-evenly;}
+.centered {justify-content: center;}
+
+/* Navigation */
+
+nav.top,
+nav.side {
+    background-color: var(--menu-color);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+nav.side {flex-direction: column; /* is updated to row on smaller devices, then docked at bottom */}
+div.top.content {
+    position: fixed;
+}
+
+nav div.logocontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-left: 5rem;
+    color: var(--menu-logo-color);
+}
+nav div.logocontainer img,
+nav div.logocontainer i {
+    height: var(--nav-item-height);
+    width: 3rem;
+    font-size: var(--nav-item-height);
+}
+nav div.logocontainer h1,
+nav div.logocontainer h2,
+nav div.logocontainer h3 {
+    margin: 0%;
+}
+
+nav.top ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;  
+}
+nav.top ul li {
+    list-style: none;
+    min-width: 4rem;
+    min-height: var(--nav-item-height);
+    display: flex;
+}
+nav.top ul li a,
+nav.top ul li a:visited {
+    display: flex;
+    align-items: center;
+    min-width: 10rem;
+    padding: .5rem;
+    margin: 1rem 1rem;
+    border-radius: 1rem;
+    background-color: var(--menu-item-color);
+    text-decoration: none;
+    transition: all .5s ease;
+}
+nav.top ul li a i {
+    font-size: 2rem;
+    align-self: center;
+    color: var(--menu-itemlogo-color    )
+}
+nav.top ul li a span {
+    padding-left: 1rem;
+    color: var(--menu-text-color);
+    transition: opacity .5s ease;
+    opacity: 100%;   
+}
+
+/* Menu Customizations */
+nav.top ul li a.nodefaultwidth {min-width: 1rem;}
