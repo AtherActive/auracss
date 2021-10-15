@@ -27,14 +27,14 @@
     div.col.xs-s25 {width: 25%;}
     div.col.xs-none {display: none;}
 
+    h1 {font-size: 1.4rem;}
+    h2 {font-size: 1.2rem;}
+    h3 {font-size: .1rem;}
+    h4 {font-size: .8rem;}
+
     html, body {
         font-size: 14px;
     }
-
-    h1 {font-size: 1rem;}
-    h2 {font-size: .8rem;}
-    h3 {font-size: .7rem;}
-    h4 {font-size: .65rem;}
     
 }
 
@@ -53,10 +53,10 @@
     div.col.s-s25 {width: 25%;}
     div.col.s-none {display: none;}
 
-    h1 {font-size: 1.2rem;}
-    h2 {font-size: 1rem;}
-    h3 {font-size: .8rem;}
-    h4 {font-size: .7rem;}
+    h1 {font-size: 1.4rem;}
+    h2 {font-size: 1.2rem;}
+    h3 {font-size: .1rem;}
+    h4 {font-size: .8rem;}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
@@ -125,4 +125,21 @@
                 max-height: 1000px;
                 max-width: 100%;
             }
+
+            nav.top ul li ul {
+                height: 0;
+                margin-left: 1rem;
+                right: inherit;
+                height: 0;
+            }
+            nav.top ul li:hover ul {
+                height: max-content;
+                right: inherit;
+                opacity: 1;
+                display: block;
+                position: static;
+                width: 50%;
+                transition: all .5s;
+            }
+            
 }
