@@ -240,18 +240,22 @@ div.card-content {
 .centered {justify-content: center;}
 
 /* Navigation */
+nav {
+    display: flex;
+    transition: all .5s ease;
+}
 
 nav.top,
-nav.side {
+nav div.side {
     background-color: var(--menu-color);
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
 }
-nav.side {flex-direction: column; /* is updated to row on smaller devices, then docked at bottom */}
-div.top.content {
-    position: fixed;
-}
+nav div.side {flex-direction: column; /* is updated to row on smaller devices, then docked at bottom */}
 
 nav div.logocontainer {
     display: flex;
@@ -277,14 +281,18 @@ nav.top ul {
     list-style: none;
     display: flex;
     padding: 0;
-    margin: 0;  
+    margin: 0;
+    transition: all 1s ease;
 }
 nav.top ul li {
     list-style: none;
     min-width: 4rem;
     min-height: var(--nav-item-height);
     display: flex;
+    transition: all 1s ease;
 }
+
+nav a#mobile,
 nav.top ul li a,
 nav.top ul li a:visited {
     display: flex;
@@ -297,11 +305,25 @@ nav.top ul li a:visited {
     text-decoration: none;
     transition: all .5s ease;
 }
+nav a#mobile {
+    min-width: 1rem;
+    display: none;
+    transition: all .5s ease;
+}
+
+nav a#mobile:hover,
+nav.top ul li a:hover {
+    filter: brightness(1.2);
+    transition: all .2s ;
+}
+
+nav a#mobile i,
 nav.top ul li a i {
     font-size: 2rem;
     align-self: center;
-    color: var(--menu-itemlogo-color    )
+    color: var(--menu-itemlogo-color)
 }
+
 nav.top ul li a span {
     padding-left: 1rem;
     color: var(--menu-text-color);
