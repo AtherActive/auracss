@@ -1,6 +1,8 @@
 # AuraCSS - Keep It Simple
 Why make it hard when you can keep it simple? This CSS framework tries to do just that!
 
+## WARNING:  AURACSS IS STILL IN DEVELOPMENT
+
 # Features
 - Grid based on the Flexbox system
 - Fully responsive
