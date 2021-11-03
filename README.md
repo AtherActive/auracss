@@ -18,7 +18,7 @@ This framework relies partially on you to set how you want you page to look. The
 | m      | <1199px |
 
 Now, to use these sizes, they must be applied to Columns. This is done simply by checking the table below.
-| Size | Size (based on parent component) |
+| Option | Size (based on parent component) |
 |------|----------------------------------|
 | s100 | 100%                             |
 | s90* | 90%                              |
