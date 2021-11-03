@@ -2,6 +2,7 @@
 Why make it hard when you can keep it simple? This CSS framework tries to do just that!
 
 ## WARNING:  AURACSS IS STILL IN DEVELOPMENT
+Do not expect the version in the repo to be any good as it is right now. Features are being added at the moment
 
 # Features
 - Grid based on the Flexbox system
