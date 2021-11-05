@@ -50,18 +50,15 @@ body * {box-sizing: border-box;}
     align-items: center;
 }
 
-.background.color.s1 {
-    background-color: var(--style1-bgcolor);
-}
+.background.color-s1 {background-color: var(--style1-bgcolor);}
 
-.background.color.s2 {
-    background-color: var(--style2-bgcolor);
-}
+.background.color-s2 {background-color: var(--style2-bgcolor);}
 
 .background.image {
     background-image: var(--image);
     background-size: cover;
 }
+
 
 .background.transparent {
     background-color: var(--transparent-background);
@@ -106,8 +103,14 @@ p {
 .txt.left {text-align: left;}
 .txt.right {text-align: right;}
 
+/* Text alignment options REFACTORED */
+.txt-center {text-align: center;}
+.txt-left {text-align: left;}
+.txt-right {text-align: right;}
+
 /* Text modifiers */
 .txt.small {font-size: .5rem;}
+.txt-small {font-size: .5rem;}
 .bold {font-weight: 800;}
 
 /* Grid */
@@ -155,7 +158,6 @@ a.button.visited {
     background-color: var(--button-color1);
     font-size: 1.2rem;
     transition: var(--button-transition-time);
-
     padding-top: .2rem;
     padding-bottom: .2rem;
     padding-left: 1rem;
@@ -186,14 +188,10 @@ a.button.visited:hover {
 }
 
 /* Opacity */
-.opacity-75.s1 {background-color: rgba(var(--style1-bgcolor,75%));}
-.opacity-75.s2 {background-color: rgba(var(--style2-bgcolor,75%));}
+.opacity-75 {opacity: 75%;}
 .opacity-50 {opacity: 50%;}
 .opacity-25 {opacity: 25%;}
 .opacity-0 {opacity: 0%;}
-.opacity.test {
-    background-color: transparent inherit;
-}
 
 /* Coloring */
 
@@ -204,7 +202,6 @@ a.button.visited:hover {
 div.card {
     --bgstyle: var(--style1-bgcolor);
     --txtstyle: var(--style1-text-color);
-
     color: var(--txtstyle);
     background-color: var(--bgstyle);
     border: transparent 1px rgba(0, 0, 0, 0);
@@ -230,8 +227,8 @@ div.card-content {
 }
 
 /* effects */
-.zooming:hover {background-size: 150%;}
-.zooming {background-size: 100%;}
+.zooming:hover {background-size: 150%; transition: background-size .2s;}
+.zooming {background-size: 100%; transition: background-size .2s}
 
 /* Alignment Global */
 .around {justify-content: space-around;}
@@ -385,4 +382,17 @@ code {
 pre {
     margin: 0;
     padding: 0;
+}
+
+/* */
+input {
+    min-height: 1rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    padding-left: 1rem;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    border-radius: .2rem;
+    background-color: rgb(224, 224, 224);
 }
