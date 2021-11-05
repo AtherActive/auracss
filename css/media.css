@@ -27,6 +27,15 @@
     div.col.xs-s25 {width: 25%;}
     div.col.xs-none {display: none;}
 
+    div.none {display:block}
+    div.col.xs100 {width: 100%;}
+    div.col.xs75 {width: 75%;}
+    div.col.xs66 {width: calc(100%/3*2);}
+    div.col.xs50 {width: 50%;}
+    div.col.xs33 {width: calc(100%/3);}
+    div.col.xs25 {width: 25%;}
+    div.col.xsnone {display: none;}
+
     h1 {font-size: 1.4rem;}
     h2 {font-size: 1.2rem;}
     h3 {font-size: .1rem;}
@@ -53,6 +62,16 @@
     div.col.s-s25 {width: 25%;}
     div.col.s-none {display: none;}
 
+/* Refactored version */
+    div.none {display:block}
+    div.col.s100 {width: 100%;}
+    div.col.s75 {width: 75%;}
+    div.col.s66 {width: calc(100%/3*2);}
+    div.col.s50 {width: 50%;}
+    div.col.s33 {width: calc(100%/3);}
+    div.col.s25 {width: 25%;}
+    div.col.snone {display: none;}
+
     h1 {font-size: 1.4rem;}
     h2 {font-size: 1.2rem;}
     h3 {font-size: .1rem;}
@@ -72,6 +91,16 @@
     div.col.m-s33 {width: calc(100%/3);}
     div.col.m-s25 {width: 25%;}
     div.col.m-none {display: none;}
+
+    /* Refactored version */
+    div.none {display:block}
+    div.col.m100 {width: 100%;}
+    div.col.m75 {width: 75%;}
+    div.col.m66 {width: calc(100%/3*2);}
+    div.col.m50 {width: 50%;}
+    div.col.m33 {width: calc(100%/3);}
+    div.col.m25 {width: 25%;}
+    div.col.mnone {display: none;}
 }
 
 @media only screen and (min-width: 100px) and (max-width: 1199px) {
@@ -91,9 +120,9 @@
                 margin-top: .1rem;
                 margin-bottom: .1rem;
             }
-            nav ul,
-            nav ul.between,
-            nav ul.around {
+            nav.top ul,
+            nav.top ul.between,
+            nav.top ul.around {
                 overflow: hidden;
                 transition: all 1s ease;
                 max-height: 0px;
@@ -101,7 +130,7 @@
                 flex-direction: column;
                 margin-bottom: .5rem;
             }
-            nav a#mobile {
+            nav.top a#mobile {
                 display: flex;
                 position: fixed;
                 top: 0;
@@ -110,17 +139,17 @@
                 margin-top: .2rem;
                 padding: .4rem;
             }
-            nav a#mobile[pressed] {
+            nav.top a#mobile[pressed] {
                 transition: all .5s ease;
                 justify-content: center;
                 transform: rotate(180deg)
             }
 
 
-            nav[open] {
+            nav.top[open] {
                 transition: all .5s ease;
             }
-            nav ul[open] {
+            nav.top ul[open] {
                 transition: all 1s ease;
                 max-height: 1000px;
                 max-width: 100%;
