@@ -11,6 +11,9 @@ between Bootstap and Tailwind. Containing some basic modules like Bootstrap but 
 - Utility classes to provide quick styling when needed
 - Fully Responsive
 
+## In-depth about everything
+If you want addition information about components and how AuraCSS works, check out the **Wiki**!
+
 ## How to use
 Using AuraCSS can be as easy as you want it! We'l explain both methods down here.
 
