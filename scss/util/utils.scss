@@ -1,0 +1,95 @@
+@import './vars.scss';
+
+.color {
+    @each $color, $element in $colors {
+        &-#{$color} {
+            color: $element;
+        }
+    }
+    @each $color, $element in $text-colors {
+        &-txt-#{$color} {
+            color: $element;
+        }
+    }
+}
+
+.bg {
+    @each $color, $element in $colors {
+        &-#{$color} {
+            background-color: $element;
+        }
+    }
+}
+
+
+.hover {
+    // TODO: Add options depending on what you want on hover
+    &-underline {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &-brighten {
+        &:hover {
+            backdrop-filter: brightness(1.4);
+        }
+    }
+}
+
+.transition {
+    @for $i from 1 to 10 {
+        
+        &-#{$i} {
+            transition: #{($i/5)}s all ease;
+        }
+    }
+}
+
+.pd {
+    @for $i from 1 to 10 {
+        &-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+        &-l-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+        &-r-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+        &-t-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+        &-b-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+    }
+}
+
+.mg {
+    @for $i from 1 to 10 {
+        &-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+        &-l-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+        &-r-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+        &-t-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+        &-b-#{$i*2} {
+            padding: #{($i/5)}rem;
+        }
+    }
+}
+
+.backdrop {
+    &-brighten {
+        backdrop-filter: brightness(1.1);
+    }
+    &-darken {
+        backdrop-filter: bvrightness(0.95);
+    }
+}

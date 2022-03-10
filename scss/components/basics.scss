@@ -1,0 +1,68 @@
+@import '../util/vars.scss';
+
+a {
+    color: map-get($map: $colors, $key: 'theme');
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    border: .2rem solid transparent;
+    border-radius: $border-radius; 
+    text-align: center;
+    padding: 1rem 2rem;
+    margin: .4rem;
+    font-weight: 600;
+    color: map-get($map: $colors, $key: 'theme');
+
+    &:hover {
+        border: .2rem solid map-get($map: $colors, $key: 'theme');
+        border-radius: calc($border-radius*2);
+        transition: $transition;
+    }
+
+}
+
+blockquote {
+    @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+    background-color: map-get($map: $colors, $key: 'background');
+    padding: .5rem 2rem;
+    margin: 1rem 0;
+    border-left: .5rem solid map-get($map: $colors, $key: 'theme');
+    border-radius: $border-radius;
+    box-shadow: $basic-shadow;
+    transition: $transition;
+
+    &::before {
+        content: '"\A';
+        font-family: 'Secular One', sans-serif;
+        font-size: 2rem;
+        display: block;
+        color: map-get($map: $text-colors, $key: 'gray');
+        height: 2rem;
+    }
+    &::after {
+        content: '\A"'; 
+        font-family: 'Secular One', sans-serif;
+        font-size: 2rem;
+        display: block;
+        text-align: right;
+        color: map-get($map: $text-colors, $key: 'gray');
+        height: 1.5rem;
+    }
+
+    &:hover {
+        box-shadow:$basic-shadow_hover;
+    }
+}
+
+p {
+    line-height: 1.6rem
+}
+
+hr {
+    width: 90%;
+}

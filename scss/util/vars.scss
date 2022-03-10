@@ -1,0 +1,47 @@
+// General
+$font: sans-serif;
+$font-size: 18px;
+$border-radius: .2rem;
+$transition: all .2s ease;
+
+$header-sizes: ( 
+    "1": 2.5rem,
+    "2": 2.3rem,
+    "3": 2rem,
+    "4": 1.7rem,
+    "5": 1.5rem,
+    "6": 1.2rem
+);
+
+// Shadows
+$basic-shadow: .1rem .3rem .2rem rgb(129, 129, 129);
+$basic-shadow_hover: .1rem .3rem .5rem rgb(129, 129, 129);
+
+// Colors
+$colors: (
+    'theme': rgb(152, 0, 240),
+    'background': rgb(252, 252, 252),
+    'navbar': rgb(26, 26, 26),
+);
+$text-colors: (
+    'normal': rgb(0,0,0),
+    'white': rgb(255, 255, 255),
+    'gray': rgb(70, 70, 70)
+);
+
+$fields_bg_color: map-get($map: $colors, $key: 'navbar');
+$fields_text_color: map-get($map: $text-colors, $key: 'white');
+
+// Grid
+$sizes: (
+    "xs" : 320px,
+    's': 576px,
+    'm' : 768px,
+    "l" : 992px,
+    'xl' : 1200px,
+    'xxl' : 1400px
+);
+$division-count: 20;
+
+// Navigation
+$nav-item-height: 4rem;

@@ -1,0 +1,3 @@
+@function GetMapElement($map,$id) {
+    @return map.get($map,#id);
+}
