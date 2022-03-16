@@ -1,3 +1,11 @@
 @function GetMapElement($map,$id) {
-    @return map.get($map,#id);
+    @return map-get($map,#id);
+}
+
+@function GetColor($color) {
+    @return map-get($map: $colors, $key: $color);
+}
+
+@function GetTextColor($color) {
+    @return map-get($map: $text-colors, $key: $color);
 }

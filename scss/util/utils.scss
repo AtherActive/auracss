@@ -85,11 +85,88 @@
     }
 }
 
+.txt {
+    &-align {
+        &-center {text-align: center;}
+        &-left {text-align:left;}
+        &-right {text-align: right;}
+    }
+
+   &-fs {
+    @for $i from 1 to 10 {
+        @if $i < 5 {
+            &-0#{$i*2} {
+                font-size: $i*.2rem;
+            }
+        }
+        &-#{$i*2} {
+            font-size: $i*.2rem;
+        }
+    }
+   }
+}
+
 .backdrop {
     &-brighten {
         backdrop-filter: brightness(1.1);
     }
     &-darken {
         backdrop-filter: bvrightness(0.95);
+    }
+}
+
+.width {
+    --val: 0rem;
+    width: var(--val);
+
+    @for $i from 1 to 30 {
+        &-#{$i*4} {
+            width: $i*4rem;
+        }
+    }
+}
+
+.height {
+    --val: 0rem;
+    width: var(--val);
+
+    @for $i from 1 to 30 {
+        &-#{$i*4} {
+            width:$i*4rem;
+        }
+    }
+}
+
+.border-radius {
+    @for $i from 1 to 10 {
+        @if $i < 5 {
+            &-0#{$i*2} {
+                border-radius: $i*.2rem;
+            }
+        }
+        &-#{$i*2} {
+            border-radius: $i*.2rem;
+        }
+    }
+}
+
+.border {
+    @for $i from 0 to 10 {
+        @if $i < 5 {
+            &-t-0#{$i*2} {border-top: $i*.2rem solid}
+            &-b-0#{$i*2} {border-bottom: $i*.2rem solid}
+            &-l-0#{$i*2} {border-left: $i*.2rem solid}
+            &-r-0#{$i*2} {border-right: $i*.2rem solid}
+        }
+        &-t-#{$i*2} {border-top: $i*.2rem solid}
+        &-b-#{$i*2} {border-bottom: $i*.2rem solid}
+        &-l-#{$i*2} {border-left: $i*.2rem solid}
+        &-r-#{$i*2} {border-right: $i*.2rem solid}
+    }
+
+    @each $color, $element in $colors {
+        &-color-#{$color} {
+            border-color: $element
+        }
     }
 }
