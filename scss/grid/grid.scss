@@ -4,6 +4,7 @@
 [class^='col-'],
 [class^=' col-'] {
     display: flex;
+    flex-direction: column;
 }
 
 .row {
@@ -36,7 +37,7 @@
     @each $size, $screenwidth in $sizes {
         %col-#{$size}-#{$i},
         .col-#{$size}-#{$i} {
-            @media screen and (min-width: $screenwidth) {
+            @media screen and (max-width: $screenwidth) {
                 width: $width;
             }
         }
@@ -45,6 +46,8 @@
 }
 
 .flex {
+    display: flex;
+    
     &-fd-ror {flex-direction: row-reverse;}
     &-fd-col {flex-direction: column;}
     &-fd-colr {flex-direction: column-reverse;}

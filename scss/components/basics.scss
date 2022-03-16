@@ -1,30 +1,14 @@
 @import '../util/vars.scss';
 
-a {
-    color: map-get($map: $colors, $key: 'theme');
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-button {
-    border: .2rem solid transparent;
-    border-radius: $border-radius; 
-    text-align: center;
-    padding: 1rem 2rem;
-    margin: .4rem;
-    font-weight: 600;
-    color: map-get($map: $colors, $key: 'theme');
-
-    &:hover {
-        border: .2rem solid map-get($map: $colors, $key: 'theme');
-        border-radius: calc($border-radius*2);
-        transition: $transition;
-    }
-
-}
+body {
+    padding: 0;
+    margin: 0;
+    font-size: $font-size;
+    font-family: $font;
+    background-color: $body-color;
+    overflow-x: none;
+    color: $body-text-color;
+}   
 
 blockquote {
     @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
@@ -60,9 +44,17 @@ blockquote {
 }
 
 p {
-    line-height: 1.6rem
+    line-height: 1.6rem;
+    margin: .4rem 0rem;
 }
 
 hr {
-    width: 90%;
+    border: none;
+    border-top: .2rem solid;
+    width: 100%;
+    margin: 0;
+}
+
+img {
+    object-fit: cover;
 }
