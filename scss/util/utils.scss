@@ -51,16 +51,16 @@
             padding: #{($i/5)}rem;
         }
         &-l-#{$i*2} {
-            padding: #{($i/5)}rem;
+            padding-left: #{($i/5)}rem;
         }
         &-r-#{$i*2} {
-            padding: #{($i/5)}rem;
+            padding-right: #{($i/5)}rem;
         }
         &-t-#{$i*2} {
-            padding: #{($i/5)}rem;
+            padding-top: #{($i/5)}rem;
         }
         &-b-#{$i*2} {
-            padding: #{($i/5)}rem;
+            padding-bottom: #{($i/5)}rem;
         }
     }
 }
@@ -68,19 +68,19 @@
 .mg {
     @for $i from 1 to 10 {
         &-#{$i*2} {
-            padding: #{($i/5)}rem;
+            margin: #{($i/5)}rem;
         }
         &-l-#{$i*2} {
-            padding: #{($i/5)}rem;
+            margin-left: #{($i/5)}rem;
         }
         &-r-#{$i*2} {
-            padding: #{($i/5)}rem;
+            margin-right: #{($i/5)}rem;
         }
         &-t-#{$i*2} {
-            padding: #{($i/5)}rem;
+            margin-top: #{($i/5)}rem;
         }
         &-b-#{$i*2} {
-            padding: #{($i/5)}rem;
+            margin-bottom: #{($i/5)}rem;
         }
     }
 }
@@ -121,7 +121,7 @@
 
     @for $i from 1 to 30 {
         &-#{$i*4} {
-            width: $i*4rem;
+            width: $i*4%;
         }
     }
 }
@@ -132,13 +132,13 @@
 
     @for $i from 1 to 30 {
         &-#{$i*4} {
-            width:$i*4rem;
+            width:$i*4%;
         }
     }
 }
 
 .border-radius {
-    @for $i from 1 to 10 {
+    @for $i from 0 to 10 {
         @if $i < 5 {
             &-0#{$i*2} {
                 border-radius: $i*.2rem;
@@ -157,11 +157,12 @@
             &-b-0#{$i*2} {border-bottom: $i*.2rem solid}
             &-l-0#{$i*2} {border-left: $i*.2rem solid}
             &-r-0#{$i*2} {border-right: $i*.2rem solid}
+        } @else {
+            &-t-#{$i*2} {border-top: $i*.2rem solid}
+            &-b-#{$i*2} {border-bottom: $i*.2rem solid}
+            &-l-#{$i*2} {border-left: $i*.2rem solid}
+            &-r-#{$i*2} {border-right: $i*.2rem solid}
         }
-        &-t-#{$i*2} {border-top: $i*.2rem solid}
-        &-b-#{$i*2} {border-bottom: $i*.2rem solid}
-        &-l-#{$i*2} {border-left: $i*.2rem solid}
-        &-r-#{$i*2} {border-right: $i*.2rem solid}
     }
 
     @each $color, $element in $colors {
