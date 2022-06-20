@@ -23,6 +23,12 @@ a {
             width: 100%;
         }
     }
+
+    &.no-underline {
+        &:before {
+            border-bottom: none;
+        }
+    }
 }
 
 button {
