@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss" : "node-sass --watch ./scss/auracss.scss -o ./css"
+    "scss": "sass -w ./scss:./css --style=compressed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "sass": "^1.52.3"
   }
 }

@@ -147,6 +147,15 @@
         &-#{$i*2} {
             border-radius: $i*.2rem;
         }
+
+        &-t-#{$i*2} {
+            border-top-left-radius: $i*.2rem;
+            border-top-right-radius: $i*.2rem;
+        }
+        &-b-#{$i*2} {
+            border-bottom-left-radius: $i*.2rem;
+            border-bottom-right-radius: $i*.2rem;
+        }
     }
 }
 
