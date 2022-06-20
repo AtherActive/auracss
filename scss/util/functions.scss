@@ -1,5 +1,5 @@
 @function GetMapElement($map,$id) {
-    @return map-get($map,#id);
+    @return map-get($map,$id);
 }
 
 @function GetColor($color) {
@@ -8,4 +8,11 @@
 
 @function GetTextColor($color) {
     @return map-get($map: $text-colors, $key: $color);
+}
+
+
+@mixin Flex($direction) {
+    display: flex;
+    flex-direction: $direction;
+
 }
