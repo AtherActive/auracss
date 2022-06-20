@@ -1,0 +1,41 @@
+@import '../util/vars.scss';
+
+.card {
+    @include Flex(column);
+    @extend .border-radius-04;
+    position: relative;
+    filter: box-shadow($basic-shadow);
+    background-color: $card-color;
+
+    img {
+        width: 100%;
+        @extend .border-radius-t-4;
+    }
+
+    .card-content {
+        @include Flex(column);
+        @extend .pd-6;
+        @extend .border-radius-b-4;
+        background-color: $card-color;
+    }
+
+    a.card-clickable {
+        position: absolute;
+        top: 0%;
+        bottom: 0%;
+        right: 0%;
+        left: 0%;
+        width: 100%;
+    }
+
+    &.overlay {
+        .card-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.4);
+        }
+    }
+}
