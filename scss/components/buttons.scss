@@ -29,6 +29,16 @@ a {
             border-bottom: none;
         }
     }
+
+    &.hv-underline {
+        @each $color, $element in $colors {
+            &-color-#{$color} {
+                &:before {
+                    border-bottom-color: $element;
+                }
+            }
+        }
+    }
 }
 
 button {
