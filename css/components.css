@@ -2011,6 +2011,14 @@ a {
     width: 100%; }
   a.no-underline:before {
     border-bottom: none; }
+  a.hv-underline-color-theme:before {
+    border-bottom-color: #623CEA; }
+  a.hv-underline-color-accent:before {
+    border-bottom-color: #623CEA; }
+  a.hv-underline-color-background:before {
+    border-bottom-color: #171A21; }
+  a.hv-underline-color-background-bright:before {
+    border-bottom-color: #1f232c; }
 
 button {
   border: .2rem solid transparent;
