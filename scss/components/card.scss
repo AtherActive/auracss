@@ -1,8 +1,11 @@
 @import '../util/vars.scss';
+@import '../util/utils.scss';
 
 .card {
     @include Flex(column);
     @extend .border-radius-04;
+    @extend .mg-t-4;
+    @extend .mg-b-4;
     position: relative;
     filter: box-shadow($basic-shadow);
     background-color: $card-color;
