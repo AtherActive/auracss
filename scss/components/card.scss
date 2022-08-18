@@ -3,22 +3,22 @@
 
 .card {
     @include Flex(column);
-    @extend .border-radius-04;
     @extend .mg-t-4;
     @extend .mg-b-4;
     position: relative;
     filter: box-shadow($basic-shadow);
     background-color: $card-color;
+    border-radius: $card-border-radius;
 
     img {
         width: 100%;
-        @extend .border-radius-t-4;
+        border-radius: $card-border-radius $card-border-radius 0 0;
     }
 
     .card-content {
         @include Flex(column);
-        @extend .pd-6;
-        @extend .border-radius-b-4;
+        border-radius: $card-border-radius;
+        padding: $card-content-padding;
         background-color: $card-color;
     }
 
@@ -32,6 +32,9 @@
     }
 
     &.overlay {
+        img {
+            border-radius: $card-border-radius;
+        }
         .card-content {
             position: absolute;
             top: 0;
