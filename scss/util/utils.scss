@@ -119,9 +119,9 @@
     --val: 0rem;
     width: var(--val);
 
-    @for $i from 1 to 30 {
-        &-#{$i*4} {
-            width: $i*4%;
+    @for $i from 1 to 100 {
+        &-#{$i} {
+            width: $i*1%;
         }
     }
 }
@@ -131,8 +131,8 @@
     width: var(--val);
 
     @for $i from 1 to 30 {
-        &-#{$i*4} {
-            width:$i*4%;
+        &-#{$i} {
+            width:$i*1%;
         }
     }
 }
