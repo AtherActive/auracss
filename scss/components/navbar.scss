@@ -194,12 +194,13 @@ nav {
                     height: max-content;
                     opacity: 1;
                     padding-left: 2rem;
+                    border-left: .2rem solid white;
+                    border-radius: .2rem;
 
                     >li {
                         max-width: 100rem;
                         width: 100%;
                         height: 2rem;
-                        border-left: .2rem solid white;
                         padding-left: 0.5rem;
                         a{
                             display: flex;
