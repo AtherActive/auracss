@@ -130,7 +130,7 @@
     --val: 0rem;
     width: var(--val);
 
-    @for $i from 1 to 30 {
+    @for $i from 1 to 100 {
         &-#{$i} {
             width:$i*1%;
         }
