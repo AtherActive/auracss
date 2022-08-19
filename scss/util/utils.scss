@@ -119,9 +119,16 @@
     --val: 0rem;
     width: var(--val);
 
-    @for $i from 1 to 100 {
+    @for $i from 1 to 101 {
         &-#{$i} {
             width: $i*1%;
+        }
+        @each $size, $screenwidth in $sizes {
+            &-#{$size}-#{$i} {
+                @media screen and (max-width: $screenwidth) {
+                    width: $i*1%;
+                }
+            }
         }
     }
 }
@@ -130,9 +137,16 @@
     --val: 0rem;
     width: var(--val);
 
-    @for $i from 1 to 100 {
+    @for $i from 1 to 101 {
         &-#{$i} {
             width:$i*1%;
+        }
+        @each $size, $screenwidth in $sizes {
+            &-#{$size}-#{$i} {
+                @media screen and (max-width: $screenwidth) {
+                    width: $i*1%;
+                }
+            }
         }
     }
 }
