@@ -11,11 +11,11 @@
 
 /* ICONS */
 // Boxicons is our icon provider. It is recommended to leave this enabled
-// If you are using custom icons, you can disable it. See the README -
-// -for more information
+// If you are using custom icons, you can disable it. You can also use -
+// a local Icon css file insted. See the README for more information.
 @import url('https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css');
 
 // When using a custom Icon provider, please update this to represent
 // the base class that is used by those icons.
-// The current value is for Boxicons.
+// The default value is for Boxicons.
 $icons-base-class: 'bx';
