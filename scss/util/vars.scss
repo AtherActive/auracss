@@ -59,6 +59,7 @@ $nav-height-desktop: 4rem;
 $nav-item-height: 4rem;
 $navbar-color: map-get($map: $colors, $key: 'theme');
 $navbar-text-color: map-get($map: $text-colors, $key: 'white');
+$navbar-dropdown-color: map-get($map: $colors, $key: 'background-bright');
 
 // Footer
 $footer-color: map-get($map: $colors, $key: 'theme');
@@ -75,7 +76,7 @@ $banner-height: 2rem;
 $mast-height: 20rem;
 
 // Article
-$article-margin: 2rem;
+$article-margin: 2rem 0 2rem 0;
 
 // Cards
 $card-color: GetColor('background-bright');

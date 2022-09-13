@@ -1,5 +1,3 @@
-@import './vars.scss';
-
 .color {
     @each $color, $element in $colors {
         &-#{$color} {

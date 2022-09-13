@@ -253,6 +253,36 @@ nav {
     }
 }
 
+.nav-top.new-dropdowns>ul>li {
+    @media screen and (min-width: map-get($sizes,$key:"l")) {
+        >ul {
+            padding: 1rem 0 1rem 0;
+            width: 14rem;
+            left: -2rem;
+            border-radius: 0 0 $border-radius $border-radius;
+            box-shadow: $basic-shadow;
+            background-color: $navbar-dropdown-color;
+            
+            >li{
+                height: 2rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                min-width: 10rem;
+                width: 100%;
+                a {
+                    font-size: 1rem;
+                    justify-content: flex-start;
+                }      
+            }
+        }
+    
+        &:hover>ul {
+            gap: .8rem;
+        }
+    }
+
+}
+
 
 @keyframes nav-dropdown {
     0% {

@@ -1,17 +1,22 @@
 
 ::-webkit-scrollbar {
     width: .4rem;
+    height: .4rem;
 }
 
 ::-webkit-scrollbar-track {
     background: transparent;
+    width: .4rem;
 }
 
 ::-webkit-scrollbar-thumb {
     background: #888;
     border-radius: 1rem;
+    width: .4rem;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+

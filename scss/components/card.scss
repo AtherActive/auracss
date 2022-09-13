@@ -1,5 +1,3 @@
-@import '../util/vars.scss';
-@import '../util/utils.scss';
 
 .card {
     @include Flex(column);
@@ -44,4 +42,8 @@
             background-color: rgba(0,0,0,0.4);
         }
     }
+}
+
+[class^='col-']>.card {
+    margin: 0.5rem;
 }
