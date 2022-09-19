@@ -192,3 +192,15 @@
         }
     }
 }
+
+
+.hide-on-mobile {
+    @media screen and (max-width: map-get($sizes,$key:"xl")) {
+        display: none;
+    }
+}
+.hide-on-desktop {
+    @media screen and (min-width: map-get($sizes,$key:"xl")) {
+        display: none;
+    }
+}
