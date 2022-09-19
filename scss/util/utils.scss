@@ -121,14 +121,14 @@
         width: auto;
     }
 
-    @for $i from 1 to 101 {
+    @for $i from 1 to 51 {
         &-#{$i} {
-            width: $i*1%;
+            width: $i*2%;
         }
         @each $size, $screenwidth in $sizes {
             &-#{$size}-#{$i} {
                 @media screen and (max-width: $screenwidth) {
-                    width: $i*1%;
+                    width: $i*2%;
                 }
             }
         }
@@ -143,14 +143,14 @@
         height: auto;
     }
 
-    @for $i from 1 to 101 {
+    @for $i from 1 to 51 {
         &-#{$i} {
-            width:$i*1%;
+            width:$i*2%;
         }
         @each $size, $screenwidth in $sizes {
             &-#{$size}-#{$i} {
                 @media screen and (max-width: $screenwidth) {
-                    width: $i*1%;
+                    width: $i*2%;
                 }
             }
         }
