@@ -82,3 +82,12 @@ $article-margin: 2rem 0 2rem 0;
 $card-color: GetColor('background-bright');
 $card-border-radius: .4rem;
 $card-content-padding: 0.6rem;
+
+// Dropowns
+$dropdown-width: 15rem;
+$dropdown-color: GetColor('background-bright');
+$dropdown-text-color: GetTextColor('normal');
+$dropdown-border-radius: $border-radius;
+$dropdown-shadow: $basic-shadow;
+$dropdown-top-offset: 4rem;
+$dropdown-padding: .6rem 1rem .6rem 1rem;
