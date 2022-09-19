@@ -117,6 +117,10 @@
     --val: 0rem;
     width: var(--val);
 
+    &-auto {
+        width: auto;
+    }
+
     @for $i from 1 to 101 {
         &-#{$i} {
             width: $i*1%;
@@ -134,6 +138,10 @@
 .height {
     --val: 0rem;
     width: var(--val);
+
+    &-auto {
+        height: auto;
+    }
 
     @for $i from 1 to 101 {
         &-#{$i} {

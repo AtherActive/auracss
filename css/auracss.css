@@ -1390,6 +1390,9 @@ nav ul > li > ul {
   --val: 0rem;
   width: var(--val);
 }
+.width-auto {
+  width: auto;
+}
 .width-1 {
   width: 1%;
 }
@@ -4694,6 +4697,9 @@ nav ul > li > ul {
 .height {
   --val: 0rem;
   width: var(--val);
+}
+.height-auto {
+  height: auto;
 }
 .height-1 {
   width: 1%;
@@ -10370,6 +10376,9 @@ nav ul > li > ul {
   --val: 0rem;
   width: var(--val);
 }
+.width-auto {
+  width: auto;
+}
 .width-1 {
   width: 1%;
 }
@@ -13674,6 +13683,9 @@ nav ul > li > ul {
 .height {
   --val: 0rem;
   width: var(--val);
+}
+.height-auto {
+  height: auto;
 }
 .height-1 {
   width: 1%;
